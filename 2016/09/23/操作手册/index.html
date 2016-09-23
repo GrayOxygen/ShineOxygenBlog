@@ -53,25 +53,48 @@
         
           <a class="main-nav-link" href="/ShineOxygenBlog/about">About Me</a>
         
-          <a class="main-nav-link" href="/ShineOxygenBlog/ShineOxygenBlog/sitemap.xml">SiteMap</a>
+          <a class="main-nav-link" href="/ShineOxygenBlog/sitemap.xml">SiteMap</a>
         
-          <a class="main-nav-link" href="/ShineOxygenBlog/ShineOxygenBlog/atom.xml">订阅RSS</a>
+          <a class="main-nav-link" href="/ShineOxygenBlog/atom.xml">订阅RSS</a>
         
       </nav>
       <nav id="sub-nav">
         
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
+      <!--搜索框-->
       <div id="search-form-wrap">
         <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
+          <input type="search" name="word" id="theSearchId" maxlength="20" class="search-form-input" placeholder="Search">
+          <script>
+               $('#theSearchId').bind('keypress',function(event){
+                  if(event.keyCode == "13"){
+                      document.getElementById("swiftypeId").val(document.getElementById("theSearchId"));
+                      document.getElementById("swiftypeId").fireEvent("keypress");
+                      // 设置值 调用key
+                  }
+               });
+          </script>
+          <input type="hidden" class="st-default-search-input"  id="swiftypeId"  >
+          <!--
           <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
+          -->
           <input type="submit" value="" class="search-form-submit">
           <input name=tn type=hidden value="bds">
           <input name=cl type=hidden value="3">
           <input name=ct type=hidden value="2097152">
           <input type="hidden" name="si" value="grayoxygen.github.io">
         </form>
+        <!--swiftype引擎-->
+        <script type="text/javascript">
+          (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+          (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+          e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+          })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+          _st('install','-tfMC_ePsmd5heFQT8XP','2.0.0');
+        </script>
       </div>
+
     </div>
   </div>
 </header>
@@ -102,7 +125,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!-- Table of Contents -->
+        <!-- toc指定是否生成并显示文章目录 -->
         
           <div id="toc" class="toc-article">
             <strong class="toc-title">文章目录</strong>
@@ -192,10 +215,11 @@
 <p>具体效果参考<a href="https://grayoxygen.github.io/ShineOxygenWiki">我的wiki</a></p>
 
       
+
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://grayoxygen.github.io/ShineOxygenBlog/2016/09/23/操作手册/" data-id="citfzpquc0000kcanxsxpuzbp" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="https://grayoxygen.github.io/ShineOxygenBlog/2016/09/23/操作手册/" data-id="citg70jrc0002zganw0f3mskk" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
@@ -285,6 +309,13 @@
   </div>
 
   
+    <div class="widget-wrap">
+  <h3 class="widget-title">Weibo</h3>
+  <div class="widget" style="padding: 0px">
+	
+ </div>
+</div>
+  
 </aside>
       
     </div>
@@ -310,9 +341,9 @@
   
     <a href="/ShineOxygenBlog/about" class="mobile-nav-link">About Me</a>
   
-    <a href="/ShineOxygenBlog/ShineOxygenBlog/sitemap.xml" class="mobile-nav-link">SiteMap</a>
+    <a href="/ShineOxygenBlog/sitemap.xml" class="mobile-nav-link">SiteMap</a>
   
-    <a href="/ShineOxygenBlog/ShineOxygenBlog/atom.xml" class="mobile-nav-link">订阅RSS</a>
+    <a href="/ShineOxygenBlog/atom.xml" class="mobile-nav-link">订阅RSS</a>
   
 </nav>
   <!-- totop start -->
