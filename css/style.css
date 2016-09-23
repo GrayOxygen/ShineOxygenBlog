@@ -442,6 +442,11 @@ body {
 /*logo显得大一点，另外修改颜色*/
   color: #fff;
   font-weight: bolder;
+/*让logo处于黄金分割点*/
+  margin-left: -50%;
+}
+#logo-wrap {
+  margin-top: -1%;
 }
 #subtitle {
   font-size: 16px;
