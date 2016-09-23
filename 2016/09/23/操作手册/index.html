@@ -6,20 +6,20 @@
   
   <title>ditto+GitHub Pages搭建和发布个人wiki | ShineOxygen的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="[toc]本文介绍如何用ditto构建wiki静态站点，发布到github pages可随时随地进行访问，ditto构建的wiki支持站内查询和在线编辑，适合搭建个人wiki。
-几种wiki搭建技术的比较在使用ditto之前我还尝试了xwiki，gollum，MDWiki，xwiki偏向企业级，当时因为丰富的扩展插件用起来会很合适，后考虑到github pages提供免费的静态站点发布以及个人wi">
+  <meta name="description" content="本文介绍如何用ditto构建wiki静态站点，发布到github pages可随时随地进行访问，ditto构建的wiki支持站内查询和在线编辑，适合搭建个人wiki。
+几种wiki搭建技术的比较在使用ditto之前我还尝试了xwiki，gollum，MDWiki，xwiki偏向企业级，当时因为丰富的扩展插件用起来会很合适，后考虑到github pages提供免费的静态站点发布以及个人wiki的简洁">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ditto+GitHub Pages搭建和发布个人wiki">
 <meta property="og:url" content="https://grayoxygen.github.io/2016/09/23/操作手册/index.html">
 <meta property="og:site_name" content="ShineOxygen的博客">
-<meta property="og:description" content="[toc]本文介绍如何用ditto构建wiki静态站点，发布到github pages可随时随地进行访问，ditto构建的wiki支持站内查询和在线编辑，适合搭建个人wiki。
-几种wiki搭建技术的比较在使用ditto之前我还尝试了xwiki，gollum，MDWiki，xwiki偏向企业级，当时因为丰富的扩展插件用起来会很合适，后考虑到github pages提供免费的静态站点发布以及个人wi">
+<meta property="og:description" content="本文介绍如何用ditto构建wiki静态站点，发布到github pages可随时随地进行访问，ditto构建的wiki支持站内查询和在线编辑，适合搭建个人wiki。
+几种wiki搭建技术的比较在使用ditto之前我还尝试了xwiki，gollum，MDWiki，xwiki偏向企业级，当时因为丰富的扩展插件用起来会很合适，后考虑到github pages提供免费的静态站点发布以及个人wiki的简洁">
 <meta property="og:image" content="https://grayoxygen.github.io/ShineOxygenBlog/2016/09/23/操作手册/githubpages.png">
-<meta property="og:updated_time" content="2016-09-23T17:05:46.671Z">
+<meta property="og:updated_time" content="2016-09-23T20:06:52.563Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ditto+GitHub Pages搭建和发布个人wiki">
-<meta name="twitter:description" content="[toc]本文介绍如何用ditto构建wiki静态站点，发布到github pages可随时随地进行访问，ditto构建的wiki支持站内查询和在线编辑，适合搭建个人wiki。
-几种wiki搭建技术的比较在使用ditto之前我还尝试了xwiki，gollum，MDWiki，xwiki偏向企业级，当时因为丰富的扩展插件用起来会很合适，后考虑到github pages提供免费的静态站点发布以及个人wi">
+<meta name="twitter:description" content="本文介绍如何用ditto构建wiki静态站点，发布到github pages可随时随地进行访问，ditto构建的wiki支持站内查询和在线编辑，适合搭建个人wiki。
+几种wiki搭建技术的比较在使用ditto之前我还尝试了xwiki，gollum，MDWiki，xwiki偏向企业级，当时因为丰富的扩展插件用起来会很合适，后考虑到github pages提供免费的静态站点发布以及个人wiki的简洁">
 <meta name="twitter:image" content="https://grayoxygen.github.io/ShineOxygenBlog/2016/09/23/操作手册/githubpages.png">
   
   
@@ -65,15 +65,24 @@
       <!--搜索框-->
       <div id="search-form-wrap">
         <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
-          <input type="search" name="word" id="theSearchId" maxlength="20" class="search-form-input" placeholder="Search">
+          <input type="search" name="word" id="theSearchId" onkeypress="return searchPress(event)" maxlength="20" class="search-form-input" placeholder="Search">
           <script>
-               $('#theSearchId').bind('keypress',function(event){
-                  if(event.keyCode == "13"){
-                      document.getElementById("swiftypeId").val(document.getElementById("theSearchId"));
-                      document.getElementById("swiftypeId").fireEvent("keypress");
-                      // 设置值 调用key
+            function searchPress(e){
+                  var keynum; 
+                  if(window.event){ // IE
+                    keynum = e.keyCode
                   }
-               });
+                  else if(e.which){ // Netscape/Firefox/Opera
+                    keynum = e.which
+                  }
+
+                  document.getElementById('#theSearchId').onkeypress('keypress',function(event){
+                      if(keynum == "13"){
+                          document.getElementById("swiftypeId").val(document.getElementById("theSearchId"));
+                          document.getElementById("swiftypeId").fireEvent("keypress");
+                      }
+                   });
+            }
           </script>
           <input type="hidden" class="st-default-search-input"  id="swiftypeId"  >
           <!--
@@ -132,7 +141,7 @@
               <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#几种wiki搭建技术的比较"><span class="toc-number">1.</span> <span class="toc-text">几种wiki搭建技术的比较</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下载ditto"><span class="toc-number">2.</span> <span class="toc-text">下载ditto</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写作"><span class="toc-number">3.</span> <span class="toc-text">写作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运行服务器"><span class="toc-number">4.</span> <span class="toc-text">运行服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署发布"><span class="toc-number">5.</span> <span class="toc-text">部署发布</span></a></li></ol>
           </div>
         
-        <p>[toc]<br>本文介绍如何用ditto构建wiki静态站点，发布到github pages可随时随地进行访问，ditto构建的wiki支持站内查询和在线编辑，适合搭建个人wiki。</p>
+        <p>本文介绍如何用ditto构建wiki静态站点，发布到github pages可随时随地进行访问，ditto构建的wiki支持站内查询和在线编辑，适合搭建个人wiki。</p>
 <h2 id="几种wiki搭建技术的比较"><a href="#几种wiki搭建技术的比较" class="headerlink" title="几种wiki搭建技术的比较"></a>几种wiki搭建技术的比较</h2><p>在使用ditto之前我还尝试了xwiki，gollum，MDWiki，xwiki偏向企业级，当时因为丰富的扩展插件用起来会很合适，后考虑到github pages提供免费的静态站点发布以及个人wiki的简洁性，就放弃了，以后团队需要时再考虑，而gollum之所以没采用是因为我经常要在windows上维护本地wiki，在windows上直接只在github提供的wiki上操作又没有树形目录不能调整布局样式，不方便(而且gollum安装时碰到了因为gollum的默认依赖grit导致的编码问题，更换依赖为rugged后，解决部分问题，搜索依然乱码，一想，windows都不支持就不浪费时间了)，放弃。MDWiki跟ditto类似，都是通过一个html来处理写作好的markdown文件，但是ditto的布局我更偏向一点，简洁而又突出内容，搭建也很简单，加上github pages就能发布到公网了。</p>
 <h2 id="下载ditto"><a href="#下载ditto" class="headerlink" title="下载ditto"></a>下载ditto</h2><blockquote>
 <p>执行命令 <code>curl -L https://git.io/v6T7r &gt; install.sh &amp;&amp; sh install.sh</code> </p>
@@ -219,7 +228,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="https://grayoxygen.github.io/ShineOxygenBlog/2016/09/23/操作手册/" data-id="citg70jrc0002zganw0f3mskk" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="https://grayoxygen.github.io/ShineOxygenBlog/2016/09/23/操作手册/" data-id="citg7okpq0002moancsgwz8cl" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
@@ -353,6 +362,7 @@
 
 <!-- totop end -->
 
+
 <!-- 多说公共js代码 start -->
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"shineoxygen"};
@@ -366,6 +376,7 @@ var duoshuoQuery = {short_name:"shineoxygen"};
   })();
   </script>
 <!-- 多说公共js代码 end -->
+
 
 
 <!-- 百度分享 start -->

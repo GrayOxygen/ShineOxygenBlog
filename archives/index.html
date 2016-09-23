@@ -56,15 +56,24 @@
       <!--搜索框-->
       <div id="search-form-wrap">
         <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
-          <input type="search" name="word" id="theSearchId" maxlength="20" class="search-form-input" placeholder="Search">
+          <input type="search" name="word" id="theSearchId" onkeypress="return searchPress(event)" maxlength="20" class="search-form-input" placeholder="Search">
           <script>
-               $('#theSearchId').bind('keypress',function(event){
-                  if(event.keyCode == "13"){
-                      document.getElementById("swiftypeId").val(document.getElementById("theSearchId"));
-                      document.getElementById("swiftypeId").fireEvent("keypress");
-                      // 设置值 调用key
+            function searchPress(e){
+                  var keynum; 
+                  if(window.event){ // IE
+                    keynum = e.keyCode
                   }
-               });
+                  else if(e.which){ // Netscape/Firefox/Opera
+                    keynum = e.which
+                  }
+
+                  document.getElementById('#theSearchId').onkeypress('keypress',function(event){
+                      if(keynum == "13"){
+                          document.getElementById("swiftypeId").val(document.getElementById("theSearchId"));
+                          document.getElementById("swiftypeId").fireEvent("keypress");
+                      }
+                   });
+            }
           </script>
           <input type="hidden" class="st-default-search-input"  id="swiftypeId"  >
           <!--
@@ -245,6 +254,7 @@
 
 <!-- totop end -->
 
+
 <!-- 多说公共js代码 start -->
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"shineoxygen"};
@@ -258,6 +268,7 @@ var duoshuoQuery = {short_name:"shineoxygen"};
   })();
   </script>
 <!-- 多说公共js代码 end -->
+
 
 
 <!-- 百度分享 start -->

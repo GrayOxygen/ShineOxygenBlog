@@ -5,7 +5,7 @@
   <link href="/ShineOxygenBlog/atom.xml" rel="self"/>
   
   <link href="https://grayoxygen.github.io/"/>
-  <updated>2016-09-23T17:05:46.671Z</updated>
+  <updated>2016-09-23T20:06:52.563Z</updated>
   <id>https://grayoxygen.github.io/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="https://grayoxygen.github.io/2016/09/23/%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C/"/>
     <id>https://grayoxygen.github.io/2016/09/23/操作手册/</id>
     <published>2016-09-23T13:49:59.032Z</published>
-    <updated>2016-09-23T17:05:46.671Z</updated>
+    <updated>2016-09-23T20:06:52.563Z</updated>
     
-    <content type="html"><![CDATA[<p>[toc]<br>本文介绍如何用ditto构建wiki静态站点，发布到github pages可随时随地进行访问，ditto构建的wiki支持站内查询和在线编辑，适合搭建个人wiki。</p>
+    <content type="html"><![CDATA[<p>本文介绍如何用ditto构建wiki静态站点，发布到github pages可随时随地进行访问，ditto构建的wiki支持站内查询和在线编辑，适合搭建个人wiki。</p>
 <h2 id="几种wiki搭建技术的比较"><a href="#几种wiki搭建技术的比较" class="headerlink" title="几种wiki搭建技术的比较"></a>几种wiki搭建技术的比较</h2><p>在使用ditto之前我还尝试了xwiki，gollum，MDWiki，xwiki偏向企业级，当时因为丰富的扩展插件用起来会很合适，后考虑到github pages提供免费的静态站点发布以及个人wiki的简洁性，就放弃了，以后团队需要时再考虑，而gollum之所以没采用是因为我经常要在windows上维护本地wiki，在windows上直接只在github提供的wiki上操作又没有树形目录不能调整布局样式，不方便(而且gollum安装时碰到了因为gollum的默认依赖grit导致的编码问题，更换依赖为rugged后，解决部分问题，搜索依然乱码，一想，windows都不支持就不浪费时间了)，放弃。MDWiki跟ditto类似，都是通过一个html来处理写作好的markdown文件，但是ditto的布局我更偏向一点，简洁而又突出内容，搭建也很简单，加上github pages就能发布到公网了。</p>
 <h2 id="下载ditto"><a href="#下载ditto" class="headerlink" title="下载ditto"></a>下载ditto</h2><blockquote>
 <p>执行命令 <code>curl -L https://git.io/v6T7r &gt; install.sh &amp;&amp; sh install.sh</code> </p>
@@ -107,8 +107,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;[toc]&lt;br&gt;本文介绍如何用ditto构建wiki静态站点，发布到github pages可随时随地进行访问，ditto构建的wiki支持站内查询和在线编辑，适合搭建个人wiki。&lt;/p&gt;
-&lt;h2 id=&quot;几种wiki搭建技术的比较&quot;&gt;&lt;a href=&quot;#几种wiki搭
+      &lt;p&gt;本文介绍如何用ditto构建wiki静态站点，发布到github pages可随时随地进行访问，ditto构建的wiki支持站内查询和在线编辑，适合搭建个人wiki。&lt;/p&gt;
+&lt;h2 id=&quot;几种wiki搭建技术的比较&quot;&gt;&lt;a href=&quot;#几种wiki搭建技术的比较&quot; c
     
     </summary>
     
