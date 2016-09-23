@@ -124,7 +124,7 @@ body,
   height: 100%;
 }
 body {
-  background: #ffffe0;
+  background: #ecedef;
   font: 14px/1.6em "微软雅黑", "Microsoft Yahei", "Droid Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
 }
@@ -177,7 +177,7 @@ body {
   -ms-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
   z-index: 1;
-  background: #ffffe0;
+  background: #ecedef;
 }
 .mobile-nav-on #wrap {
   left: 280px;
@@ -765,7 +765,7 @@ a.article-title:hover {
   line-height: 1em;
   padding: 6px 15px;
   border-radius: 15px;
-  background: #ffffe0;
+  background: #ecedef;
   color: #999;
   text-shadow: 0 1px #fff;
   text-decoration: none;
@@ -935,7 +935,7 @@ a.article-title:hover {
 }
 .article-share-links {
   zoom: 1;
-  background: #ffffe0;
+  background: #ecedef;
 }
 .article-share-links:before,
 .article-share-links:after {
