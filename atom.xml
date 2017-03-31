@@ -5,7 +5,7 @@
   <link href="/ShineOxygenBlog/atom.xml" rel="self"/>
   
   <link href="https://grayoxygen.github.io/"/>
-  <updated>2016-09-23T20:06:52.563Z</updated>
+  <updated>2017-03-31T14:39:10.238Z</updated>
   <id>https://grayoxygen.github.io/</id>
   
   <author>
@@ -16,10 +16,56 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ebbinghaus</title>
+    <link href="https://grayoxygen.github.io/2017/03/31/ebbinghaus/"/>
+    <id>https://grayoxygen.github.io/2017/03/31/ebbinghaus/</id>
+    <published>2017-03-31T13:47:24.000Z</published>
+    <updated>2017-03-31T14:39:10.238Z</updated>
+    
+    <content type="html"><![CDATA[<header>艾宾浩斯曲线计算复习日期</header>
+
+<p>由于每天要记忆新的单词，又要复习老的单词，根据艾宾浩斯遗忘曲线，可以针对性地复习</p>
+<p>根据ebbinghaus遗忘曲线制定如下复习安排</p>
+<ol>
+<li>第一个记忆周期：5分钟2.  第二个记忆周期：30分钟</li>
+<li>第三个记忆周期：12小时</li>
+<li>第四个记忆周期：1天</li>
+<li>第五个记忆周期：2天</li>
+<li>第六个记忆周期：4天</li>
+<li>第七个记忆周期：7天</li>
+<li>第八个记忆周期：15天</li>
+<li>第九个记忆周期：31天</li>
+</ol>
+<p>举例说明下本程序的作用： 我要背绿皮书（新东方的单词书），共50个list，我们每天早上和晚上背一次，间隔差不多12个小时，一页大概需要5分钟记忆时间，一个list大概30分钟背完，这里就是一天记忆的过程，即第一到第三个记忆周期（边背边记刚背的新单词）。对于当天之后的复习，需要安排在所学新单词当天的1,2,4,7,15,31天后复习，4月1号背的新内容和4月2号的以及之后的每一天的内容都要手动算出复习日期，太麻烦！所以，为了不去人工去计算复习的日期，这里用程序实现，便于我去做复习安排（本人用excel做复习计划）</p>
+<p>具体代码可查看我的github repository，只是一个html（包含了js），直接下载到本地打开即可计算复习日期</p>
+<p><a href="https://github.com/GrayOxygen/ebbinghaus.git" title="帮你单词记忆打通关" target="_blank" rel="external">根据艾宾浩斯曲线计算复习日期</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;header&gt;艾宾浩斯曲线计算复习日期&lt;/header&gt;
+
+&lt;p&gt;由于每天要记忆新的单词，又要复习老的单词，根据艾宾浩斯遗忘曲线，可以针对性地复习&lt;/p&gt;
+&lt;p&gt;根据ebbinghaus遗忘曲线制定如下复习安排&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;第一个记忆周期：5分钟2.  第二个记忆
+    
+    </summary>
+    
+      <category term="学习方法" scheme="https://grayoxygen.github.io//categories/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
+    
+    
+      <category term="javascript" scheme="https://grayoxygen.github.io/tags/javascript/"/>
+    
+      <category term="ebbinghaus/艾宾浩斯曲线" scheme="https://grayoxygen.github.io/tags/ebbinghaus-%E8%89%BE%E5%AE%BE%E6%B5%A9%E6%96%AF%E6%9B%B2%E7%BA%BF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ditto+GitHub Pages搭建和发布个人wiki</title>
-    <link href="https://grayoxygen.github.io/2016/09/23/%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C/"/>
-    <id>https://grayoxygen.github.io/2016/09/23/操作手册/</id>
-    <published>2016-09-23T13:49:59.032Z</published>
+    <link href="https://grayoxygen.github.io/2016/09/24/%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C/"/>
+    <id>https://grayoxygen.github.io/2016/09/24/操作手册/</id>
+    <published>2016-09-24T04:01:54.781Z</published>
     <updated>2016-09-23T20:06:52.563Z</updated>
     
     <content type="html"><![CDATA[<p>本文介绍如何用ditto构建wiki静态站点，发布到github pages可随时随地进行访问，ditto构建的wiki支持站内查询和在线编辑，适合搭建个人wiki。</p>
@@ -100,7 +146,7 @@
 &lt;/script&gt;
 </code></pre><p>打开git bash执行<code>git push origin master</code>同步到github仓库</p>
 <p>在github的项目主页面，找到setting按钮，进入更改GitHub Pages选项，如图save后提示你已发布</p>
-<img src="/ShineOxygenBlog/2016/09/23/操作手册/githubpages.png" alt="[]" title="[]">
+<img src="/ShineOxygenBlog/2016/09/24/操作手册/githubpages.png" alt="[]" title="[]">
 <p>save保存你所选分支后，提示已发布，wiki已发布到公网，访问吧</p>
 <p>具体效果参考<a href="https://grayoxygen.github.io/ShineOxygenWiki">我的wiki</a></p>
 ]]></content>
@@ -127,9 +173,9 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://grayoxygen.github.io/2016/09/21/Hello%20World/"/>
-    <id>https://grayoxygen.github.io/2016/09/21/Hello World/</id>
-    <published>2016-09-21T03:30:33.017Z</published>
+    <link href="https://grayoxygen.github.io/2016/09/24/Hello%20World/"/>
+    <id>https://grayoxygen.github.io/2016/09/24/Hello World/</id>
+    <published>2016-09-24T04:01:54.739Z</published>
     <updated>2016-09-23T11:53:29.956Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br><a id="more"></a></p>
